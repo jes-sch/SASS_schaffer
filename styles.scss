@@ -1,0 +1,268 @@
+$azul: #1124f2;
+$shadowazul: #0000B2;
+$verde: #49d70b;
+$shadowverde: #008200;
+$naranja: #fb5c04;
+$rosa: #eb0ea7;
+$font: Helvetica, Arial, sans-serif;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $font;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Header inicio */
+
+header {
+    width: 100%;
+    height: 170px;
+    
+    nav {
+        height: 150px;
+        width: 100%;
+    }
+}
+
+.hide {
+    font-size: 30px;
+    padding: 15px;
+    color: $verde;
+    text-shadow: 5px 5px 5px $shadowverde;
+    cursor: pointer;
+    display: none;
+}
+
+.logo {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    position: fixed;
+}
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    position: fixed;
+    margin-top: 60px;
+    margin-bottom: 10px;
+
+    ul {
+        display: flex;
+        flex-direction: row;
+        margin-right: 10px;
+    }
+    
+    ul li {
+        text-decoration: none;
+        list-style: none;
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+    
+    li a {
+        text-decoration: none;
+        color: $azul;
+        font-size: 17px;
+        text-shadow: 3px 3px 3px $shadowazul;
+        text-transform: uppercase;
+
+        &:hover {
+            border: 1.5px solid;
+            color: $verde;
+            text-shadow: 3px 3px 3px $shadowverde;
+            padding: 10px 13px 10px 13px;
+            border-radius: 15px;
+            transition: all 0.5s ease;
+        }
+    }
+}
+
+/* Header fin */
+/* Main inicio */
+
+.titulo {
+    padding-top: 40px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+h1 a {
+    color: $verde;
+    text-decoration: none;
+    text-shadow: 5px 5px 4px $shadowverde;
+
+    &:hover {
+        transition: all 0.5s ease;
+        text-shadow: 3px 3px 3px $shadowverde;
+    }
+}
+
+.subtitulo {
+    color: $azul;
+    padding-bottom: 5px;
+}
+
+.hola {
+    padding: 30px;
+}
+
+.soy {
+    color: $rosa;
+    font-size: 18px;
+    padding-bottom: 10px;
+
+    &.soy span {
+        color: $azul;
+    }
+}
+
+#img-perfil {
+    margin: 0px 30px 0px 30px;
+}
+
+.soyTexto {
+    color: $rosa;
+    font-size: 18px;
+    padding: 30px;
+    text-align: justify;
+
+    &.soyTexto span {
+        color: $azul;
+    }
+}
+
+h1 {
+    color: $verde;
+    padding-top: 10px;
+}
+
+.inspoImg {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.boxArtists {
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+
+    &.boxArtists h2 {
+        text-align: center;
+        margin: 15px;
+    }
+}
+
+.inspoText {
+    padding: 20px;
+    color: $rosa;
+    font-size: 20px;
+    text-align: justify;
+}
+
+/* Header fin */
+/* Footer inicio */
+
+footer {
+    color: $azul;
+    min-height: 50px;
+    width: 100%;
+    padding-top: 40px;
+    text-align: center;
+
+    footer p {
+        font-size: 15px;
+    }
+}
+
+#redes {
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    font-size: 20px;
+    border-radius: 15px;
+    border: 2px solid $verde;
+    padding: 30px 0;
+    margin: 0 10px;
+
+    &#redes a {
+        text-align: center;
+        color: $verde;
+        text-decoration: none;
+        text-shadow: 3px 3px 3px $shadowverde;
+    }
+    &#redes i {
+        font-size: 2rem;
+    }
+}
+
+.footer__iconos {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 10px;
+}
+
+#copy {
+    text-align: center;
+    margin: 40px 0;
+    color: $azul;
+    font-size: 16px;
+}
+
+/* Footer fin */
+/* botón UP inicio */
+
+.subir {
+    height: 25px;
+    width: 20px;
+    color: $verde;
+    position: fixed;
+    bottom: 60px;
+    right: 30px;
+    text-align: center;
+    font-size: 30px;
+    text-shadow: 5px 5px 5px $shadowverde;
+}
+
+/* botón UP fin */
+/* media queries inicio */
+
+@media only screen and (max-width:790px) {
+    ul li {
+        width: 100%;
+        padding: 16px;
+        text-align: left;
+        display: none;
+    }
+
+    .hide {
+        display: block;
+    }
+
+    #redes {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #redes a {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    .inspoText {
+        text-align: center;
+        padding: 10px;
+    }
+}
+
+/* media queries fin */
